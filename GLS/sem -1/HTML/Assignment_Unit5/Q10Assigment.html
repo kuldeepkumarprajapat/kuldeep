@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <script>
+        function calculateResults() {
+            var name = document.getElementById("name").value;
+            var semester = document.getElementById("semester").value;
+            var marks1 = parseFloat(document.getElementById("marks1").value);
+            var marks2 = parseFloat(document.getElementById("marks2").value);
+            var marks3 = parseFloat(document.getElementById("marks3").value);
+
+            if (!name.match(/^[A-Za-z]/)) {
+                alert("Name must start with a character.");
+                return;
+            }
+
+            if (isNaN(marks1) || isNaN(marks2) || isNaN(marks3)) {
+                alert("Marks must be numeric values.");
+                return;
+            }
+
+            var totalMarks = marks1 + marks2 + marks3;
+            var averageMarks = totalMarks / 3;
+
+            document.getElementById("total").textContent = "Total Marks: " + totalMarks;
+            document.getElementById("average").textContent = "Average Marks: " + averageMarks;
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+
+        <label for="semester">Semester:</label>
+        <input type="text" id="semester" required>
+        <br>
+
+        <label for="marks1">Marks for Subject 1:</label>
+        <input type="text" id="marks1" required>
+        <br>
+
+        <label for="marks2">Marks for Subject 2:</label>
+        <input type="text" id="marks2" required>
+        <br>
+
+        <label for="marks3">Marks for Subject 3:</label>
+        <input type="text" id="marks3" required>
+        <br>
+
+        <input type="button" value="Calculate Results" onclick="calculateResults()">
+    </form>
+
+    <div id="result">
+        <p id="total"></p>
+        <p id="average"></p>
+    </div>
+</body>
+</html>

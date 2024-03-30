@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Textbox Focus Content Display</title>
+</head>
+<body>
+    <h1>Textbox Focus Content Display</h1>
+    <input type="text" id="myTextbox" placeholder="Enter text here..." onfocus="displayContent()" onblur="clearPlaceholder()">
+    <p id="displayText"></p>
+
+    <script>
+        var textbox = document.getElementById("myTextbox");
+        var displayText = document.getElementById("displayText");
+        var originalPlaceholder = textbox.getAttribute("placeholder");
+
+        function displayContent() {
+            var currentText = textbox.value;
+            displayText.textContent = "Content: " + (currentText ? currentText : "No content");
+            textbox.setAttribute("placeholder", ""); 
+        }
+
+        function clearPlaceholder() {
+            textbox.setAttribute("placeholder", originalPlaceholder);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const sampleString = "Hello, World!";
+
+// Search for a substring in the string
+const searchResult = sampleString.search("World");
+document.write("Search result:\n", searchResult);
+
+// Get a slice of the string
+const slicedString = sampleString.slice(7, 12);
+document.write("\nSliced string:", slicedString);
+
+// Convert the string to lowercase
+const lowercaseString = sampleString.toLowerCase();
+document.write("\nLowercase string:", lowercaseString);
+
+// Replace a substring in the string
+const replacedString = sampleString.replace("World", "Universe");
+document.write("\nReplaced string:", replacedString);
+
+// Concatenate two strings
+const anotherString = " Have a nice day!";
+const concatenatedString = sampleString.concat(anotherString);
+document.write("\nConcatenated string:", concatenatedString);
+
+// Get the length of the string
+const stringLength = sampleString.length;
+document.write("\nString length:", stringLength);
+
+// Get a character at a specific position
+const charAtIndex = sampleString.charAt(0);
+document.write("\nCharacter at index 0:", charAtIndex);
+
+
+// Get the value of pi
+const piValue = Math.PI;
+document.write("\nPi value:", piValue);
+
+// Get the natural logarithm of 10
+const ln10Value = Math.LN10;
+document.write("\nNatural logarithm of 10:", ln10Value);
+
+// Perform various math operations
+const num1 = 5;
+const num2 = 3;
+document.write("\nRound:", Math.round(num1));
+document.write("\nCeil:", Math.ceil(num1));
+document.write("\nFloor:", Math.floor(num1));
+document.write("\nPower:", Math.pow(num1, num2));
+document.write("\nSquare root:", Math.sqrt(num1));
+document.write("\nAbsolute value:", Math.abs(-num1));
+document.write("\nMaximum:", Math.max(num1, num2));
+document.write("\nMinimum:", Math.min(num1, num2));
+document.write("\nRandom number between 0 and 1:", Math.random());
+
+
+const currentDate = new Date();
+
+document.write("\nCurrent date:", currentDate);
+document.write("\nDate:", currentDate.getDate());
+document.write("\nDay of the week (0 = Sunday, 1 = Monday, ...):", currentDate.getDay());
+document.write("\nFull year:", currentDate.getFullYear());
+document.write("\nYear (deprecated, use getFullYear instead):", currentDate.getYear());
+document.write("\nMonth (0 = January, 1 = February, ...):", currentDate.getMonth());
+document.write("\nHours:", currentDate.getHours());
+document.write("\nMinutes:", currentDate.getMinutes());
+document.write("\nSeconds:", currentDate.getSeconds());
+        </script>
+    </body>
+</html>

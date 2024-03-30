@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Reversal</title>
+</head>
+<body>
+    <script>
+        // Function to reverse a number
+        function reverseNumber(number) {
+            var reversedNumber = 0;
+            while (number > 0) {
+                reversedNumber = (reversedNumber * 10) + (number % 10);
+                number = Math.floor(number / 10);
+            }
+            return reversedNumber;
+        }
+
+        // Prompt the user for a number
+        var inputNumber = parseInt(prompt("Enter a number:"));
+
+        // Check if the user entered a valid number
+        if (!isNaN(inputNumber)) {
+            // Call the function to reverse the number
+            var reversed = reverseNumber(inputNumber);
+
+            // Display the reversed number
+            alert("Reversed Number: " + reversed);
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+        }
+    </script>
+</body>
+</html>

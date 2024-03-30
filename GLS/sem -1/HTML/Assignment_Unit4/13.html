@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function countOccurrences(inputString, targetLetter) {
+  // Initialize a count variable to store the number of occurrences
+  let count = 0;
+
+  // Loop through each character in the string
+  for (let i = 0; i < inputString.length; i++) {
+    // Check if the current character is equal to the target letter
+    if (inputString[i] === targetLetter) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// Example usage:
+const input = 'w3resource.com';
+const letterToCount = 'o';
+const result = countOccurrences(input, letterToCount);
+document.write(`Occurrences of '${letterToCount}' in '${input}': ${result}`); // Output: 2
+        </script>
+    </body>
+</html>

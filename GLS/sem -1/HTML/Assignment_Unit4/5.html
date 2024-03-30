@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Area Calculator</title>
+</head>
+<body>
+    <script>
+        // Prompt the user for the radius of the circle
+        var radius = parseFloat(prompt("Enter the radius of the circle:"));
+
+        // Check if the user entered a valid number for the radius
+        if (!isNaN(radius)) {
+            // Calculate the area of the circle
+            var area = 3.14 * radius * radius; // You can also use Math.PI instead of 3.14
+
+            // Display the result in an alert box
+            alert("The area of the circle is: " + area);
+        } else {
+            alert("Invalid input. Please enter a valid number for the radius.");
+        }
+    </script>
+</body>
+</html>

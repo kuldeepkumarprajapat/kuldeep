@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <script>
+        // Prompt the user for the principal amount
+        var principal = parseFloat(prompt("Enter the principal amount:"));
+
+        // Prompt the user for the interest rate
+        var rate = parseFloat(prompt("Enter the annual interest rate (%):"));
+
+        // Prompt the user for the time period in years
+        var time = parseFloat(prompt("Enter the time period (in years):"));
+
+        // Check if the user entered valid numbers for principal, rate, and time
+        if (!isNaN(principal) && !isNaN(rate) && !isNaN(time)) {
+            // Calculate the simple interest
+            var interest = (principal * rate * time) / 100;
+
+            // Display the result in an alert box
+            alert("The simple interest is: " + interest.toFixed(2));
+        } else {
+            alert("Invalid input. Please enter valid numbers for principal, rate, and time.");
+        }
+    </script>
+</body>
+</html>

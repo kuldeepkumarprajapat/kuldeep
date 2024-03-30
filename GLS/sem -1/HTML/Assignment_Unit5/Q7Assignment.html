@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details Validation</title>
+    <script>
+        function validateEmployeeDetails() {
+            var name = document.forms["employeeForm"]["name"].value;
+            var age = parseInt(document.forms["employeeForm"]["age"].value);
+            var department = document.forms["employeeForm"]["department"].value;
+            var designation = document.forms["employeeForm"]["designation"].value;
+            var salary = parseFloat(document.forms["employeeForm"]["salary"].value);
+            var workingDays = parseInt(document.forms["employeeForm"]["workingDays"].value);
+
+            if (name === "" || isNaN(age) || department === "" || designation === "" || isNaN(salary) || isNaN(workingDays)) {
+                alert("All fields are required and must be valid.");
+                return false;
+            }
+
+            if (age <= 18) {
+                alert("Age must be greater than 18.");
+                return false;
+            }
+
+            if (salary !== 10000) {
+                alert("Salary must be 10000.");
+                return false;
+            }
+
+            if (workingDays <= 25) {
+                alert("Number of working days must be greater than 25.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Employee Details Validation</h1>
+    <form name="employeeForm" onsubmit="return validateEmployeeDetails()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+        <br>
+
+        <label for="department">Department:</label>
+        <input type="text" name="department" id="department" required>
+        <br>
+
+        <label for="designation">Designation:</label>
+        <input type="text" name="designation" id="designation" required>
+        <br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" id="salary" required>
+        <br>
+
+        <label for="workingDays">Number of Working Days:</label>
+        <input type="number" name="workingDays" id="workingDays" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

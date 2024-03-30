@@ -1,0 +1,37 @@
+/* External CSS for GLS UNIVERSITY webpage */
+
+/* Define a CSS class for the university table */
+.university-table {
+    font-family: "Comic Sans MS", sans-serif;
+    border: 1.25px solid SteelBlue;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Define styles for the header cell (1st row) */
+.header-cell {
+    border-top: 1.25px dotted SteelBlue;
+    border-bottom: 1.25px solid SteelBlue;
+    padding: 5px;
+    vertical-align: bottom;
+}
+
+/* Define styles for label cells */
+.info-label {
+    border: 1.25px solid SteelBlue;
+    border-top: none;
+    padding: 5px;
+    vertical-align: bottom;
+    background-color: #f2f2f2;
+}
+
+/* Define styles for data cells */
+.info-data {
+    border: 1.25px solid SteelBlue;
+    border-top: none;
+    padding: 5px;
+    vertical-align: bottom;
+    background-color: #fff;
+}

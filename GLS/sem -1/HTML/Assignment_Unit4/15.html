@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function isLeapYear(year) {
+  // Leap years are divisible by 4
+  if (year % 4 === 0) {
+    // However, years divisible by 100 are not leap years, unless they are also divisible by 400
+    if (year % 100 === 0) {
+      return year % 400 === 0;
+    }
+    return true;
+  }
+  return false;
+}
+
+// Example usage:
+const yearToCheck = 2024; // Change this to the year you want to check
+if (isLeapYear(yearToCheck)) {
+    document.write(`${yearToCheck} is a leap year.`);
+} else {
+    document.write(`${yearToCheck} is not a leap year.`);
+}
+        </script>
+    </body>
+</html>

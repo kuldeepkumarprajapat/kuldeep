@@ -1,0 +1,21 @@
+/* External CSS for Mobile Phones table */
+
+/* Define a CSS class for the mobile table */
+.mobile-table {
+    border: 1.5px dotted;
+    border-spacing: 2px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Define styles for the first column */
+.bold-left-align {
+    font-family: Serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Define styles for the image cells */
+.center-align {
+    text-align: center;
+}

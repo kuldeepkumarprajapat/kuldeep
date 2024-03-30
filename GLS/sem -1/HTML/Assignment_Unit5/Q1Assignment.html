@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Switcher</title>
+    <style>
+        #image-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        #image-container img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image-container">
+        <img src="image1.jpg" id="image1" onmouseover="switchImage()">
+        <img src="image2.jpg" id="image2" onmouseover="switchImage()" style="display: none;">
+    </div>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        let currentImage = 1;
+
+        function switchImage() {
+            const image1 = document.getElementById("image1");
+            const image2 = document.getElementById("image2");
+
+            if (currentImage === 1) {
+                image1.style.display = "none";
+                image2.style.display = "inline-block";
+                currentImage = 2;
+            } else {
+                image1.style.display = "inline-block";
+                image2.style.display = "none";
+                currentImage = 1;
+            }
+        }
+
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (name === "" || email === "") {
+                alert("Both name and email fields are required.");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

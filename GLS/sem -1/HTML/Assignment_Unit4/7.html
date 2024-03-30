@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square and Cube Calculator</title>
+</head>
+<body>
+    <script>
+        // Function to calculate the square of a number
+        function calculateSquare(number) {
+            return number * number;
+        }
+
+        // Function to calculate the cube of a number
+        function calculateCube(number) {
+            return number * number * number;
+        }
+
+        // Prompt the user for a number
+        var inputNumber = parseFloat(prompt("Enter a number:"));
+
+        // Check if the user entered a valid number
+        if (!isNaN(inputNumber)) {
+            // Calculate the square and cube using the functions
+            var squareResult = calculateSquare(inputNumber);
+            var cubeResult = calculateCube(inputNumber);
+
+            // Display the results in alert boxes
+            alert("Square of " + inputNumber + " is: " + squareResult);
+            alert("Cube of " + inputNumber + " is: " + cubeResult);
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+        }
+    </script>
+</body>
+</html>

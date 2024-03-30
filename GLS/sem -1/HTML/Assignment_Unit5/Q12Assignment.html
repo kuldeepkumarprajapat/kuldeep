@@ -1,0 +1,45 @@
+//Q12 Validation with Radio ElementValidation with Radio Element
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button Validation</title>
+    <script>
+        function validateForm() {
+            var radioButtons = document.getElementsByName("gender");
+            var selectedOption = false;
+
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    selectedOption = true;
+                    break;
+                }
+            }
+
+            if (!selectedOption) {
+                alert("Please select a gender.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Radio Button Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label>
+            <input type="radio" name="gender" value="male"> Male
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="female"> Female
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="other"> Other
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

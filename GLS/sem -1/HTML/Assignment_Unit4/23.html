@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function isArmstrongNumber(number) {
+  const numString = number.toString();
+  const numDigits = numString.length;
+  let sum = 0;
+
+  for (let i = 0; i < numDigits; i++) {
+    const digit = parseInt(numString[i]);
+    sum += Math.pow(digit, numDigits);
+  }
+
+  return sum === number;
+}
+
+function findArmstrongNumbers() {
+  const armstrongNumbers = [];
+
+  for (let number = 100; number <= 999; number++) {
+    if (isArmstrongNumber(number)) {
+      armstrongNumbers.push(number);
+    }
+  }
+
+  return armstrongNumbers;
+}
+
+// Find and display Armstrong numbers of 3 digits
+const armstrongNumbers = findArmstrongNumbers();
+document.write("Armstrong numbers of 3 digits:", armstrongNumbers);
+        </script>
+    </body>
+</html>

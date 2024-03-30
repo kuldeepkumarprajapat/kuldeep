@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Function to perform addition
+function add(x, y) {
+  return x + y;
+}
+
+// Function to perform subtraction
+function subtract(x, y) {
+  return x - y;
+}
+
+// Function to perform multiplication
+function multiply(x, y) {
+  return x * y;
+}
+
+// Function to perform division with error handling
+function divide(x, y) {
+  if (y === 0) {
+    return "Error: Division by zero";
+  }
+  return x / y;
+}
+
+// Main calculator function
+function calculator(operation, x, y) {
+  switch (operation) {
+    case '+':
+      return add(x, y);
+    case '-':
+      return subtract(x, y);
+    case '*':
+      return multiply(x, y);
+    case '/':
+      return divide(x, y);
+    default:
+      return "Invalid operation";
+  }
+}
+
+// Example usage:
+const operation = '+'; // Change this to the desired operation: +, -, *, or /
+const operand1 = 5;
+const operand2 = 2;
+const result = calculator(operation, operand1, operand2);
+document.write(`Result: ${result}`);
+        </script>
+    </body>
+</html>

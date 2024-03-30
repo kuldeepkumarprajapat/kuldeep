@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp Form</title>
+    <script>
+        function validateSignUpForm() {
+            var name = document.forms["signUpForm"]["name"].value;
+            var email = document.forms["signUpForm"]["email"].value;
+            var password = document.forms["signUpForm"]["password"].value;
+            var confirmPassword = document.forms["signUpForm"]["confirmPassword"].value;
+
+            if (name === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                alert("Invalid email address.");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>SignUp Form</h1>
+    <form name="signUpForm" onsubmit="return validateSignUpForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+
+        <label for="password">Password (at least 8 characters):</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <label for="confirmPassword">Re-type Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
+        <br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

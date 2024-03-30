@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Celsius to Fahrenheit Converter</title>
+</head>
+<body>
+    <script>
+        // Prompt the user for the temperature in Celsius
+        var celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
+
+        // Check if the user entered a valid number for Celsius
+        if (!isNaN(celsius)) {
+            // Convert Celsius to Fahrenheit
+            var fahrenheit = (celsius * 1.8) + 32;
+
+            // Display the result in an alert box
+            alert("The temperature in Fahrenheit is: " + fahrenheit.toFixed(2));
+        } else {
+            alert("Invalid input. Please enter a valid number for Celsius.");
+        }
+    </script>
+</body>
+</html>

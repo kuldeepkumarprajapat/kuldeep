@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Customer Form</title>
+
+    <style>
+        .star {
+            color: red;
+        }
+
+        .input-tag {
+            width: 178px;
+        }
+
+        h1 {
+            background-color: rgb(201, 209, 206);
+            color: #000000;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Customer Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>CUSTOMER</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="user-name">NAME<sup class="star"><b>*</b></sup></label>
+                    </td>
+                    <td>
+                        <input type="text" id="user-name" class="input-tag" name="t1" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email-id">EMAIL<sup class="star"><b>*</b></sup></label>
+                    </td>
+                    <td>
+                        <input type="email" id="email-id" class="input-tag" name="t2" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="option-tag">INVESTMENT</label>
+                    </td>
+                    <td>
+                        <select class="input-tag" id="option-tag">
+                            <option value="none"></option>
+                            <option value="cars">cars</option>
+                            <option value="properties">properties</option>
+                            <option value="stocks">stocks</option>
+                            <option value="bank">bank</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="date">DATE JOINED<sup class="star"><b>*</b></sup></label>
+                    </td>
+                    <td>
+                        <input type="date" id="date" class="input-tag" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="check-box">ACTIVE</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="check-box" name="ch1">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+        <br>
+        <input type="submit" value="OK">
+        <input type="submit" value="CANCEL">
+    </form>
+</body>
+
+</html>

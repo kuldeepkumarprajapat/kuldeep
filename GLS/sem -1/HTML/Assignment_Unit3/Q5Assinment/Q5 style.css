@@ -1,0 +1,18 @@
+body {
+    line-height: 150%;
+    word-spacing: 5pt;
+    letter-spacing: 5pt;
+}
+
+
+/* 
+
+In this CSS code: 
+
+line-height: 150%;
+sets the line height to 150% of the font size,
+providing more spacing between lines of text. word-spacing: 5pt;
+sets the spacing between words to 5 points. letter-spacing: 5pt;
+sets the spacing between letters to 5 points. 
+
+*/

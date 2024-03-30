@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Prompt the user for a number
+const userInput = prompt("Enter a number:");
+
+// Convert the user input to a number
+const number = parseInt(userInput);
+
+// Check if the input is a valid number
+if (!isNaN(number)) {
+  // Display the multiplication table for the entered number
+  document.write(`Multiplication Table for ${number}:`);
+  for (let i = 1; i <= 10; i++) {
+    const result = number * i;
+    document.write(`${number} x ${i} = ${result}\n`);
+  }
+} else {
+    document.write("Invalid input. Please enter a valid number.");
+}
+        </script>
+    </body>
+</html>

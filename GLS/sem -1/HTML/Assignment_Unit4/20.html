@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Prompt the user for the first integer
+const userInput1 = prompt("Enter the first integer:");
+
+// Convert the user input to an integer
+const number1 = parseInt(userInput1);
+
+// Prompt the user for the second integer
+const userInput2 = prompt("Enter the second integer:");
+
+// Convert the user input to an integer
+const number2 = parseInt(userInput2);
+
+// Prompt the user for the third integer
+const userInput3 = prompt("Enter the third integer:");
+
+// Convert the user input to an integer
+const number3 = parseInt(userInput3);
+
+// Check if all inputs are valid integers
+if (!isNaN(number1) && !isNaN(number2) && !isNaN(number3)) {
+  if (number1 <= number2 && number1 <= number3) {
+    document.write(`The smaller integer is: ${number1}`);
+  } else if (number2 <= number1 && number2 <= number3) {
+    document.write(`The smaller integer is: ${number2}`);
+  } else {
+    document.write(`The smaller integer is: ${number3}`);
+  }
+} else {
+  document.write("Invalid input. Please enter valid integers.");
+}
+        </script>
+    </body>
+</html>

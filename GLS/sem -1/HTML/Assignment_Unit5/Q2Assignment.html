@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Case Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            margin: 50px;
+        }
+
+        #input-text {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        #output-text {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>String Case Converter</h1>
+        <input type="text" id="input-text" placeholder="Enter a string">
+        <br>
+        <button id="uppercase-btn">Convert to Uppercase</button>
+        <button id="lowercase-btn">Convert to Lowercase</button>
+        <br>
+        <textarea id="output-text" rows="4" readonly></textarea>
+    </div>
+
+    <script>
+        document.getElementById("uppercase-btn").addEventListener("click", function() {
+            convertToUpperCase();
+        });
+
+        document.getElementById("lowercase-btn").addEventListener("click", function() {
+            convertToLowerCase();
+        });
+
+        function convertToUpperCase() {
+            var inputText = document.getElementById("input-text").value;
+            var outputText = inputText.toUpperCase();
+            document.getElementById("output-text").value = outputText;
+        }
+
+        function convertToLowerCase() {
+            var inputText = document.getElementById("input-text").value;
+            var outputText = inputText.toLowerCase();
+            document.getElementById("output-text").value = outputText;
+        }
+    </script>
+</body>
+</html>

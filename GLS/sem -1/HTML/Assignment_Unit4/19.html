@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Prompt the user for the first integer
+const userInput1 = prompt("Enter the first integer:");
+
+// Convert the user input to an integer
+const number1 = parseInt(userInput1);
+
+// Prompt the user for the second integer
+const userInput2 = prompt("Enter the second integer:");
+
+// Convert the user input to an integer
+const number2 = parseInt(userInput2);
+
+// Check if both inputs are valid integers
+if (!isNaN(number1) && !isNaN(number2)) {
+  if (number1 > number2) {
+    document.write(`The larger integer is: ${number1}`);
+  } else if (number2 > number1) {
+    document.write(`The larger integer is: ${number2}`);
+  } else {
+    document.write("Both integers are equal.");
+  }
+} else {
+    document.write("Invalid input. Please enter valid integers.");
+}
+        </script>
+    </body>
+</html>
